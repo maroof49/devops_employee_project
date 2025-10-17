@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB_REPO = "your-dockerhub-username/employee-api"
+        DOCKER_HUB_REPO = "maroof49/employee-api"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourusername/employee-api-devops.git'
+                git 'https://github.com/maroof49/devops_employee_project.git'
             }
         }
 
