@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employee-api
+  template:
+    metadata:
+      labels:
+        app: employee-api
+    spec:
+      containers:
+      - name: employee-api
+        image: your-dockerhub-username/employee-api:latest
+        ports:
+        - containerPort: 8080
